@@ -1,0 +1,11 @@
+feature_rule,weight,prediction_class,sample_index
+specific gravity of urine <= 1.01,0.28237164693515576,CKD,6
+10.88 < hemoglobin level gms <= 12.65,0.21150708263946055,CKD,6
+albumin in urine <= 0.00,-0.15514711207076312,CKD,6
+serum creatinine mg dl > 2.73,0.0689022541641866,CKD,6
+hypertension yes no=no,-0.026052175990880302,CKD,6
+pus cells in urine=normal,0.014665286374732713,CKD,6
+pedal edema yes no=no,0.013958728299409287,CKD,6
+random blood glucose level mg dl <= 101.00,-0.012941763122887886,CKD,6
+34.00 < packed cell volume <= 40.00,0.012533340037483779,CKD,6
+diabetes mellitus yes no=no,0.011148904433941391,CKD,6

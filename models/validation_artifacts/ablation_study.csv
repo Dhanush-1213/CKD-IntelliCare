@@ -1,0 +1,3 @@
+Model Version,Accuracy,Macro F1,Interpretation
+Untuned LightGBM baseline,0.9924999999999999,0.9920839319494604,Raw UCI feature set; no eGFR column is present.
+Tuned deployed model,0.9949999999999999,0.9946655404634657,Measures the effect of hyperparameter tuning under the leakage guard.

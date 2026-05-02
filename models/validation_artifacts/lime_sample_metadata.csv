@@ -1,0 +1,2 @@
+sample_index,true_label,predicted_label,predicted_ckd_probability,selection_rationale
+6,CKD,CKD,0.991473013492888,True-positive CKD case with CKD probability closest to the median among true-positive CKD predictions.
