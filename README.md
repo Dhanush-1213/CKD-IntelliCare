@@ -29,7 +29,7 @@
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [The Problem](#-the-problem)
 - [The Solution](#-the-solution)
@@ -46,7 +46,7 @@
 
 ---
 
-## 🩺 The Problem
+##  The Problem
 
 Chronic Kidney Disease (CKD) affects over **850 million people worldwide** and is responsible for approximately **2.4 million deaths annually**. The tragedy? Most cases are entirely preventable — if caught early.
 
@@ -60,7 +60,7 @@ CKD-IntelliCare was built to address all three.
 
 ---
 
-## 💡 The Solution
+##  The Solution
 
 CKD-IntelliCare is a **hybrid clinical decision support system** that separates two fundamentally different tasks:
 
@@ -73,7 +73,7 @@ This separation ensures that **ML does what it's good at** (pattern recognition 
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```
 ┌─────────────────────────────────────────────────┐
@@ -112,29 +112,29 @@ This separation ensures that **ML does what it's good at** (pattern recognition 
 
 ---
 
-## ✨ Core Features
+##  Core Features
 
-### 🤖 Hybrid Intelligence
+###  Hybrid Intelligence
 A two-layer architecture that combines probabilistic ML predictions with deterministic clinical staging — mimicking how a nephrologist actually thinks.
 
-### 🛡️ Strict Leakage Prevention
+###  Strict Leakage Prevention
 eGFR and all eGFR-derived variables are explicitly excluded from ML features. This is non-negotiable — including them would make the model look brilliant on paper while being useless in deployment.
 
-### ⚖️ Clinically Honest Evaluation
+###  Clinically Honest Evaluation
 SMOTE is applied **within training folds only** — never touching validation data. This prevents the silent optimism that plagues most medical ML papers.
 
-### 📊 Bulk CSV Inference
+###  Bulk CSV Inference
 Upload a patient cohort file and receive predictions for the entire dataset in seconds — designed for real-world clinical workflows, not toy demos.
 
-### 🔍 Explainability-Ready
+###  Explainability-Ready
 Architecture is designed for SHAP and LIME integration, so clinicians can understand *why* a risk score was assigned, not just *what* it is.
 
-### 🖥️ Interactive Streamlit Interface
+###  Interactive Streamlit Interface
 A clean, intuitive UI for single-patient assessment and bulk inference — no API knowledge required.
 
 ---
 
-## 🧠 Modeling Approach
+##  Modeling Approach
 
 | Component | Choice | Rationale |
 |---|---|---|
@@ -149,7 +149,7 @@ A clean, intuitive UI for single-patient assessment and bulk inference — no AP
 
 ---
 
-## 🏥 CKD Staging Logic
+##  CKD Staging Logic
 
 Staging follows **KDIGO 2012 Clinical Practice Guidelines**, using the CKD-EPI equation for eGFR estimation.
 
@@ -169,43 +169,43 @@ The rule engine handles edge cases, missing creatinine values, and sex-based coe
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 CKD-IntelliCare/
 │
-├── 📄 train.py              # End-to-end model training pipeline
+├──  train.py              # End-to-end model training pipeline
 │   ├── Data loading & validation
 │   ├── Leakage guard (feature blocklist)
 │   ├── Stratified K-Fold + SMOTE
 │   └── Model serialization
 │
-├── 📄 predict.py            # Inference engine
+├──  predict.py            # Inference engine
 │   ├── Single-patient prediction
 │   ├── Bulk CSV inference
 │   ├── eGFR calculation (CKD-EPI)
 │   └── Rule-based staging
 │
-├── 📄 webapp.py             # Streamlit application
+├──  webapp.py             # Streamlit application
 │   ├── Patient input forms
 │   ├── Bulk upload interface
 │   └── Results dashboard
 │
-├── 📁 models/               # Serialized artifacts
+├──  models/               # Serialized artifacts
 │   ├── xgboost_model.pkl
 │   ├── lightgbm_model.pkl
 │   └── preprocessor.pkl
 │
-├── 📁 data/                 # Dataset
+├──  data/                 # Dataset
 │   └── ckd_dataset.csv
 │
-├── 📄 requirements.txt
-└── 📄 README.md
+├──  requirements.txt
+└──  README.md
 ```
 
 ---
 
-## ⚙️ Setup & Installation
+##  Setup & Installation
 
 ### Prerequisites
 
@@ -262,7 +262,7 @@ Output includes one row per patient with risk score, predicted class, eGFR, and 
 
 ---
 
-## 🧩 Design Decisions
+##  Design Decisions
 
 **Why separate ML from staging?**  
 eGFR-based staging is a clinical standard — it should never be "learned" from data. Letting ML invent its own staging criteria would produce a black box with no clinical validity. Separation keeps each component auditable and independently updatable.
@@ -275,7 +275,7 @@ Applying SMOTE before splitting creates data leakage — synthetic samples deriv
 
 ---
 
-## 🗺️ Roadmap
+##  Roadmap
 
 - [ ] SHAP global and local explanation views in webapp
 - [ ] LIME per-prediction explanation panel
@@ -287,7 +287,7 @@ Applying SMOTE before splitting creates data leakage — synthetic samples deriv
 
 ---
 
-## 👤 Author
+##  Author
 
 <div align="center">
 
