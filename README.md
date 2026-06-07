@@ -238,7 +238,7 @@ The interface will open at `http://localhost:8501`.
 
 ---
 
-## 🚀 Usage Guide
+##  Usage Guide
 
 ### Single Patient Assessment
 
